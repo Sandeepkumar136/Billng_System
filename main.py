@@ -7,7 +7,7 @@ root.geometry("1270x685")
 root.iconbitmap('1489436625-billingdatadollarcurrency_81879 (1).ico')
 headingLabel=Label(root, text="Retail Billng System", font=("times new roman", 30, 'bold')
                    ,bg="gray20",fg="gold", bd=12, relief=GROOVE)
-headingLabel.pack(fill=X,pady=10)
+headingLabel.pack(fill=X)
 
 cusomter_details_frame=LabelFrame(root, text="Customer Details", font=("time new roman",15,"bold"),
                                   fg="gold",bd=8,relief=GROOVE,bg="gray20")
@@ -203,4 +203,99 @@ textarea=Text(billFrame, height=18, width=55, yscrollcommand=scrollbar.set)
 textarea.pack()
 
 scrollbar.config(command=textarea.yview)
+
+
+billmenuFrame=LabelFrame(root, text="Bill Menu",font=("time new roman",15,"bold"),
+                                  fg="gold",bd=8,relief=GROOVE,bg="gray20")
+billmenuFrame.pack()
+
+cosmeticpricelaLabel=Label(billmenuFrame,text="Cosmetic Price", font=("time new roman",14,"bold"),bg="gray20"
+                ,fg="white")
+cosmeticpricelaLabel.grid(row=0, column=0,pady=6,padx=10,sticky="W")
+
+
+cosmeticpriceEntry=Entry(billmenuFrame,font=("time new roman",14,"bold"),width=10,bd=5)
+cosmeticpriceEntry.grid(row=0, column=1,pady=6, padx=10 )
+
+
+
+grocerypricelaLabel=Label(billmenuFrame,text="Grocery Price", font=("time new roman",14,"bold"),bg="gray20"
+                ,fg="white")
+grocerypricelaLabel.grid(row=1, column=0,pady=6,padx=10,sticky="W")
+
+
+grocerypriceEntry=Entry(billmenuFrame,font=("time new roman",14,"bold"),width=10,bd=5)
+grocerypriceEntry.grid(row=1, column=1,pady=6, padx=10 )
+
+
+drinkspricelaLabel=Label(billmenuFrame,text="Cold Drink Price", font=("time new roman",14,"bold"),bg="gray20"
+                ,fg="white")
+drinkspricelaLabel.grid(row=2, column=0,pady=6,padx=10,sticky="W")
+
+
+drinkspriceEntry=Entry(billmenuFrame,font=("time new roman",14,"bold"),width=10,bd=5)
+drinkspriceEntry.grid(row=2, column=1,pady=6, padx=10 )
+
+
+#######################################################################################################
+
+
+cosmeticTaxlaLabel=Label(billmenuFrame,text="Cosmetic Tax", font=("time new roman",14,"bold"),bg="gray20"
+                ,fg="white")
+cosmeticTaxlaLabel.grid(row=0, column=2,pady=6,padx=10,sticky="W")
+
+
+cosmeticTaxEntry=Entry(billmenuFrame,font=("time new roman",14,"bold"),width=10,bd=5)
+cosmeticTaxEntry.grid(row=0, column=3,pady=6, padx=10 )
+
+
+
+groceryTaxlaLabel=Label(billmenuFrame,text="Grocery Tax", font=("time new roman",14,"bold"),bg="gray20"
+                ,fg="white")
+groceryTaxlaLabel.grid(row=1, column=2,pady=6,padx=10,sticky="W")
+
+
+groceryTaxEntry=Entry(billmenuFrame,font=("time new roman",14,"bold"),width=10,bd=5)
+groceryTaxEntry.grid(row=1, column=3,pady=6, padx=10 )
+
+
+drinksTaxlaLabel=Label(billmenuFrame,text="Cold Drink Tax", font=("time new roman",14,"bold"),bg="gray20"
+                ,fg="white")
+drinksTaxlaLabel.grid(row=2, column=2,pady=6,padx=10,sticky="W")
+
+
+drinksTaxEntry=Entry(billmenuFrame,font=("time new roman",14,"bold"),width=10,bd=5)
+drinksTaxEntry.grid(row=2, column=3,pady=6, padx=10 )
+
+
+
+buttonFrame=Frame(billmenuFrame, bd=8, relief=GROOVE)
+
+buttonFrame.grid(row=0, column=4, rowspan=3)
+
+
+totalButton=Button(buttonFrame, text= "Total", font=('arial', 16, 'bold'), bg='gray20',fg='white',
+                   bd=5, width=8, pady=10, )
+totalButton.grid(row=0, column=0, pady=20, padx=5)
+
+
+BillButton=Button(buttonFrame, text= "Bill", font=('arial', 16, 'bold'), bg='gray20',fg='white',
+                   bd=5, width=8, pady=10, )
+BillButton.grid(row=0, column=1, pady=20, padx=5)
+
+
+emailButton=Button(buttonFrame, text= "Email", font=('arial', 16, 'bold'), bg='gray20',fg='white',
+                   bd=5, width=8, pady=10, )
+emailButton.grid(row=0, column=2, pady=20, padx=5)
+
+printButton=Button(buttonFrame, text= "Print", font=('arial', 16, 'bold'), bg='gray20',fg='white',
+                   bd=5, width=8, pady=10, )
+printButton.grid(row=0, column=3, pady=20, padx=5)
+
+
+clearButton=Button(buttonFrame, text= "Clear", font=('arial', 16, 'bold'), bg='gray20',fg='white',
+                   bd=5, width=8, pady=10, )
+clearButton.grid(row=0, column=4, pady=20, padx=5)
+
+
 root.mainloop()
